@@ -1,6 +1,7 @@
 import numpy as np
 import psycopg2
 from flask import Flask, jsonify
+from workers import wsgi # CloudFlare workers WSGI adapter
 
 app = Flask(__name__)
 
@@ -21,6 +22,8 @@ def hello_world():
         }
     )
 
+# WSGI Entrypoint for Cloudflare Workers
+Default = wsgi.entrypoint(app)
 
 @app.route("/db-check")
 def db_check():
