@@ -3,8 +3,5 @@
   "name": "flask-hello-world",
   "main": "app.py",
   "compatibility_date": "2026-09-05",
-  "compatibility_flags": ["python_workers"],
-  "python": {
-    "requirements_file": "requirements.txt"
-  }
+  "compatibility_flags": ["python_workers"]
 }
